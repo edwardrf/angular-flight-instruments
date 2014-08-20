@@ -1,0 +1,89 @@
+<div class='pfd-container'>
+  <div style='position: relative'>
+    <div class='pfd-adi'>
+      <img class='instrument pfd-back' src='assets/images/instruments/pfd/pfd_back.svg'/>
+      <div class='instrument pfd-adi-back'>
+        <img src='assets/images/instruments/pfd/pfd_adi_back.svg'/>
+        <div class='adi-markers'>
+          <div ng-repeat='i in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]'>
+            <div class='adi-marker'><span class='left'>{{(i > 9 ? i - 9 : 9 - i) * 10}}</span><span class="long line"/><span class='right'>{{(i > 9 ? i - 9 : 9 - i) * 10}}</span></div>
+            <div class='adi-marker'><span class="short line"/></div>
+            <div class='adi-marker'><span class="medium line"/></div>
+            <div class='adi-marker'><span class="short line"/></div>
+          </div>
+          <div class='adi-marker'><span class='left'>90</span><span class="long line"/><span class='right'>90</span></div>
+        </div>
+      </div>
+      <img class='instrument pfd-adi-roll' src='assets/images/instruments/pfd/pfd_adi_roll_tri.svg'/>
+      <img class='instrument pfd-adi-mask' src='assets/images/instruments/pfd/pfd_adi_mask.svg'/>
+    </div>
+    <div class='pfd-hsi'>
+      <img class='instrument pfd-hsi-back' src='assets/images/instruments/pfd/pfd_hsi_back.svg'/>
+      <img class='instrument pfd-hsi-face' src='assets/images/instruments/pfd/pfd_hsi_face.svg'/>
+    </div>
+    <div class='pfd-alt'>
+      <img class='instrument pfd-alt-back' src='assets/images/instruments/pfd/pfd_alt_back.svg'/>
+      <div class='pfd-alt-marks'>
+        <div ng-repeat='i in getAltitudeRange()'>
+          <div class='pfd-alt-mark'><span class='line'></span> {{i}}</div>
+          <div class='pfd-alt-mark'><span class='line'></span></div>
+        </div>
+      </div>
+    </div>
+    <div class='pfd-asi'>
+      <img class='instrument pfd-asi-back' src='assets/images/instruments/pfd/pfd_asi_back.svg'/>
+      <div class='pfd-asi-marks'>
+        <div ng-repeat='i in getSpeedRange()'>
+          <div class='pfd-asi-mark'><span class='line'></span> {{i}}</div>
+          <div class='pfd-asi-mark'><span class='line'></span></div>
+        </div>
+      </div>
+    </div>
+    <div class='pfd-vsi'>
+      <img class='instrument pfd-vsi-scale' src='assets/images/instruments/pfd/pfd_vsi_scale.svg'/>
+      <img class='instrument pfd-vsi-arrow' src='assets/images/instruments/pfd/pfd_vsi_arrow.svg'/>
+    </div>
+    <img class='instrument pfd-mask' src='assets/images/instruments/pfd/pfd_mask.svg'/>
+    <div class='instrument marks'>
+      <div class='pfd-hsi-marks'>
+        <img src='assets/images/instruments/pfd/pfd_hsi_marks.svg'/>
+        <div class='hsi-mark-text'>{{plane.heading|number:0}}</div>
+      </div>
+      <div class='pfd-alt-frame'>
+        <img src='assets/images/instruments/pfd/pfd_alt_frame.svg'/>
+        <div class='alt-frame-text'>
+          <span class='alt-frame-text-big'>{{getBigAlt(plane.altitude)}}</span>
+          <span class='alt-frame-text-small'>{{getSmallAlt(plane.altitude)}}</span>
+        </div>
+      </div>
+      <div class='pfd-asi-frame'>
+        <img class='instrument pfd-asi-frame' src='assets/images/instruments/pfd/pfd_asi_frame.svg'/>
+        <div class='asi-frame-text'>{{plane.speed|number:0}}</div>
+      </div>
+    </div>
+  </div>
+</div>
+<hr style='clear: both'/>
+<div>
+  <table>
+    <tr>
+      <td>Pitch</td><td> : </td><td>{{plane.pitch|number:1}}</td>
+    </tr>
+    <tr>
+      <td>Speed</td><td> : </td><td>{{plane.speed|number:1}}</td>
+    </tr>
+    <tr>
+      <td>Heading</td><td> : </td><td>{{plane.heading|number:1}}</td>
+    </tr>
+    <tr>
+      <td>Roll</td><td> : </td><td>{{plane.roll|number:1}}</td>
+    </tr>
+    <tr>
+      <td>Altitude</td><td> : </td><td>{{plane.altitude|number:1}}</td>
+    </tr>
+    <tr>
+      <td>Vertical Speed</td><td> : </td><td>{{plane.verticalSpeed|number:1}}</td>
+    </tr>
+  </table>
+</div>
+<hr>

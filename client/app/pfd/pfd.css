@@ -1,0 +1,281 @@
+div.pfd-container {
+  width: 100%;
+  height: 100%;
+  border: 1px solid blue;
+  overflow: hidden;
+}
+
+div.pfd-container .instrument {
+  /*position: relative;*/
+  position: absolute;
+  width: 100%;
+}
+
+
+/*======================= ADI section styles =========================*/
+
+div.pfd-container div.pfd-adi-back {
+  display: block;
+}
+
+div.pfd-container div.pfd-adi-back img{
+  width: 100%;
+}
+
+div.pfd-container div.pfd-adi-back div.adi-markers {
+  color: white;
+  position: absolute;
+}
+
+div.pfd-container div.pfd-adi-back div.adi-markers div.adi-marker {
+  position: relative;
+}
+
+div.pfd-container div.pfd-adi-back div.adi-markers div.adi-marker span.left {
+  float: left;
+}
+
+div.pfd-container div.pfd-adi-back div.adi-markers div.adi-marker span.right {
+  float: right;
+}
+
+div.pfd-container div.pfd-adi-back div.adi-markers div.adi-marker span.line {
+  margin: auto;
+  background-color: #FFFFFF;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left:0;
+  right:0;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+div.pfd-container div.pfd-adi-back div.adi-markers div.adi-marker span.short.line {
+  width: 12.5%;
+}
+
+div.pfd-container div.pfd-adi-back div.adi-markers div.adi-marker span.medium.line {
+  width: 25%;
+}
+
+div.pfd-container div.pfd-adi-back div.adi-markers div.adi-marker span.long.line {
+  width: 50%;
+}
+
+div.pfd-container img.pfd-adi-roll {
+  width: 70%;
+}
+
+/*===================END of ADI section styles =========================*/
+
+/*======================= HSI section styles =========================*/
+
+div.pfd-container div.pfd-hsi {
+  position:absolute;
+  width: 69%;
+  padding-top: 80%;
+  left:0;
+  right:0;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+div.pfd-container div.pfd-hsi .pfd-hsi-back {
+  width: 87%;
+  left:0;
+  right:0;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+div.pfd-container div.pfd-hsi .pfd-hsi-face {
+  /*width: 80%;*/
+  left:0;
+  right:0;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+div.pfd-container .pfd-hsi-marks {
+  position: absolute;
+  width: 10.6%;
+  padding-top: 73%;
+  left:0;
+  right:0;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+div.pfd-container .pfd-hsi-marks img {
+  position: absolute;
+  width: 100%;
+}
+
+div.pfd-container .pfd-hsi-marks div.hsi-mark-text {
+  position: absolute;
+  text-align: center;
+  color: #ffffff;
+  padding-top: 2%;
+  left:0;
+  right:0;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+/*===================End of HSI section styles =========================*/
+
+/*======================= ALT section styles =========================*/
+div.pfd-container .pfd-alt {
+  position: absolute;
+  width: 14%;
+  padding-top: 12%;
+  right: 9%;
+}
+
+div.pfd-container .pfd-alt .pfd-alt-back {
+  position: absolute;
+  width: 100%;
+}
+
+div.pfd-container .pfd-alt .pfd-alt-marks {
+  position: absolute;
+  width: 100%;
+}
+
+div.pfd-container .pfd-alt .pfd-alt-mark {
+  position: relative;
+  color: #ffffff;
+  /*font-size: 2rem;*/
+  height: 10%;
+  /*line-height: 10%;*/
+  /*border: 1px solid blue;*/
+}
+
+div.pfd-container .pfd-alt .pfd-alt-mark span.line {
+  display: inline-block;
+  /*float: left;*/
+  background-color: #FFFFFF;
+  padding-top: 2%;
+  width: 10%;
+  /*border: 1px solid brown;*/
+  vertical-align: middle;
+}
+
+div.pfd-container .pfd-alt-frame {
+  position: absolute;
+  width: 25%;
+  padding-top: 36.6%;
+  right: 0%;
+}
+
+div.pfd-container .pfd-alt-frame img{
+  position: absolute;
+  width: 100%;
+}
+
+div.pfd-container .pfd-alt-frame div.alt-frame-text{
+  position: absolute;
+  text-align: center;
+  color: #ffffff;
+  padding-top: 10%;
+  left:17%;
+}
+
+/*===================END of ALT section styles =========================*/
+
+/*======================= ASI section styles =========================*/
+div.pfd-container .pfd-asi {
+  position: absolute;
+  width: 14%;
+  padding-top: 12%;
+  left: 6.3%;
+}
+
+div.pfd-container .pfd-asi .pfd-asi-back {
+  position: absolute;
+  width: 100%;
+}
+
+div.pfd-container .pfd-asi .pfd-asi-marks {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+div.pfd-container .pfd-asi .pfd-asi-mark {
+  position: relative;
+  color: #ffffff;
+  /*font-size: 2rem;*/
+  height: 60%;
+
+  /*line-height: 100%;*/
+  /*border: 1px solid blue;*/
+  direction: rtl;
+}
+
+div.pfd-container .pfd-asi .pfd-asi-mark span.line {
+  display: inline-block;
+  background-color: #FFFFFF;
+  padding-top: 2%;
+  width: 10%;
+  /*border: 1px solid brown;*/
+  vertical-align: middle;
+}
+
+div.pfd-container .pfd-asi-frame {
+  position: absolute;
+  width: 25%;
+  padding-top: 29.3%;
+  left: 0%;
+}
+
+div.pfd-container .pfd-asi-frame img{
+  position: absolute;
+  width: 100%;
+}
+
+div.pfd-container .pfd-asi-frame div.asi-frame-text{
+  position: absolute;
+  text-align: center;
+  color: #ffffff;
+  padding-top: 39%;
+  right:28%;
+  /*font-size: 2.5rem;*/
+}
+
+/*===================End of ASI section styles =========================*/
+
+/*======================= VSI section styles =========================*/
+
+div.pfd-container .pfd-vsi {
+  position: absolute;
+  width: 6.5%;
+  padding-top: 16%;
+  right: 2%;
+}
+
+div.pfd-container .pfd-vsi .pfd-vsi-back {
+  position: absolute;
+  width: 100%;
+}
+
+div.pfd-container .pfd-vsi img.pfd-vsi-arrow {
+  position: absolute;
+  width: 70%;
+  top: 154%;
+  left: 50%;
+}
+
+/*===================END of VSI section styles =========================*/
+div.pfd-container img.pfd-mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+div.inventory .instrument {
+  border: 1px solid green;
+  padding: 3px;
+}
